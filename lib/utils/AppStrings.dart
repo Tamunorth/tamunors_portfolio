@@ -2,6 +2,10 @@ class AppStrings {
   AppStrings._();
   static const conthraxFont = 'Conthrax_sb';
   static const openSansFont = 'OpenSans';
+  static const githubUrl = 'https://github.com/Tamunorth';
+  static const githubReposUrl = 'https://github.com/Tamunorth?tab=repositories';
+  static const resumeUrl =
+      'https://drive.google.com/file/d/1pYajtWF84hB1cCZctinTaDXJ6z3Bkf3y/view?usp=sharing';
   static const lookingForward =
       'Looking forward to building great projects with you.';
   static const aboutMe =

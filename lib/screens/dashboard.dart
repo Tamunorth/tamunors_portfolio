@@ -244,12 +244,14 @@ class DesktopAPpBar extends StatelessWidget {
               children: const <Widget>[
                 AppBarText(
                   text: 'Projects',
+                  url: AppStrings.githubReposUrl,
                 ),
                 AppBarText(
                   text: 'Github',
                 ),
                 AppBarText(
                   text: 'Resume',
+                  url: AppStrings.resumeUrl,
                 ),
               ],
             ),
@@ -264,7 +266,7 @@ class AppBarText extends StatelessWidget {
   const AppBarText({
     Key? key,
     required this.text,
-    this.url = 'https://github.com/Tamunorth',
+    this.url = AppStrings.githubUrl,
   }) : super(key: key);
 
   final String text;
