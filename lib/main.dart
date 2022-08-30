@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tams_portfolio/screens/dashboard.dart';
-import 'package:tams_portfolio/utils/AppStrings.dart';
+import 'package:tams_portfolio/utils/app_strings.dart';
 
 void main() {
   runApp(const MyApp());

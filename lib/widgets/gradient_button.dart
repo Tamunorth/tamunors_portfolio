@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 class GradientButton extends StatelessWidget {
   const GradientButton({
@@ -8,13 +11,15 @@ class GradientButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isMobile = window.physicalSize.width < 600;
+
     return GestureDetector(
       onTap: () {
         launchUrl(Uri.parse('mailto:daviesmanuelfavour@gmail.com'));
       },
       child: Container(
         height: 60.0,
-        width: 240.0,
+        width: isMobile ? null : 240.0,
         child: Center(
           child: Text(
             'Contact Me',
