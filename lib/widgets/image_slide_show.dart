@@ -53,7 +53,7 @@ class _ImageSlideShowState extends State<ImageSlideShow>
         // height: (238),
         width: (320),
         decoration: BoxDecoration(
-          borderRadius: const BorderRadius.only(),
+          borderRadius: BorderRadius.circular(15.0),
           image: DecorationImage(
             image: AssetImage(widget._imageList[_currentIndex]),
             fit: BoxFit.cover,

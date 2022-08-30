@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tams_portfolio/_lib.dart';
 
-class DesktopAPpBar extends StatelessWidget {
-  const DesktopAPpBar({
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({
     Key? key,
   }) : super(key: key);
 
