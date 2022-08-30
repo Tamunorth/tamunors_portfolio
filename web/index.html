@@ -38,8 +38,35 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+
+  <style>
+
+    .container {
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+    }
+
+    body{
+      background-color:#ffffff;
+      margin-top:0px;
+      margin-left:0px;
+   }
+
+    .indicator{
+      width: 10vw;
+    }
+  </style>
 </head>
-<body>
+<body style="overflow: hidden">
+  <div id="loading_indicator" class="container">
+
+    
+    <img class="indicator" src="./assets/color_loading.gif" />
+
+  </div>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
@@ -54,5 +81,21 @@
       });
     });
   </script>
+
+<script>
+  window.onload = function(){
+    setTimeout(function() {
+
+      var loadingIndicator =  document.getElementById('loading_indicator');
+      if(loadingIndicator){
+
+        loadingIndicator.remove();
+      }
+    }
+    
+    , 10000)
+  }
+</script>
+
 </body>
 </html>
