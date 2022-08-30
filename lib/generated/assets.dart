@@ -8,6 +8,14 @@ class Assets {
       'assets/fonts/OpenSans_Regular.ttf';
   static const String fontsOpenSansSemibold =
       'assets/fonts/OpenSans_Semibold.ttf';
+  static const String pngsDropie1 = 'assets/pngs/dropie1.png';
+  static const String pngsDropie2 = 'assets/pngs/dropie2.png';
+  static const String pngsDropie3 = 'assets/pngs/dropie3.png';
+  static const String pngsDropie4 = 'assets/pngs/dropie4.png';
+  static const String pngsTx1 = 'assets/pngs/tx1.png';
+  static const String pngsTx2 = 'assets/pngs/tx2.png';
+  static const String pngsTx3 = 'assets/pngs/tx3.png';
+  static const String pngsTx4 = 'assets/pngs/tx4.png';
   static const String pngsWave = 'assets/pngs/wave.png';
   static const String svgsDirection = 'assets/svgs/direction.svg';
   static const String svgsTamLogo = 'assets/svgs/tam_logo.svg';
