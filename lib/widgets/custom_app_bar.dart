@@ -11,11 +11,11 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isMobile = window.physicalSize.width < 600;
+    bool isMobile = MediaQuery.of(context).size.width < 700;
     return Container(
       padding:
-          EdgeInsets.symmetric(horizontal: window.physicalSize.width * 0.05),
-      height: isMobile ? 70.0 : 100.0,
+          EdgeInsets.symmetric(horizontal: window.physicalSize.width * 0.02),
+      height: isMobile ? 50.0 : 100.0,
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
           Color(0x40FFF9EA),
@@ -31,17 +31,22 @@ class CustomAppBar extends StatelessWidget {
         children: <Widget>[
           isMobile
               ? SizedBox(
-                  height: 30.0,
+                  height: 20.0,
                   child: SvgPicture.asset(
                     Assets.svgsTamLogo,
                   ),
                 )
               : SvgPicture.asset(Assets.svgsTamLogo),
           isMobile
-              ? Icon(
-                  Icons.menu,
-                  size: 25,
-                  color: Colors.white,
+              ? GestureDetector(
+                  onTap: () {
+                    Scaffold.of(context).openEndDrawer();
+                  },
+                  child: Icon(
+                    Icons.menu,
+                    size: 25,
+                    color: Colors.white,
+                  ),
                 )
               : SizedBox(
                   width: 300.0,

@@ -17,15 +17,15 @@ class DesktopBody extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            VGap(height: window.physicalSize.height * 0.1),
+            VGap(height: window.physicalSize.height * 0.03),
             Container(
               margin: EdgeInsets.symmetric(
-                  horizontal: window.physicalSize.width * 0.05),
+                  horizontal: window.physicalSize.width * 0.03),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomAppBar(),
-                  VGap(height: window.physicalSize.height * 0.05),
+                  VGap(height: window.physicalSize.height * 0.03),
                   Container(
                     width: window.physicalSize.width,
                     child: Column(
@@ -62,7 +62,7 @@ class DesktopBody extends StatelessWidget {
                             fontFamily: AppStrings.conthraxFont,
                           ),
                         ),
-                        VGap(height: window.physicalSize.height * 0.027),
+                        // VGap(height: window.physicalSize.height * 0.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           mainAxisSize: MainAxisSize.min,
@@ -83,9 +83,9 @@ class DesktopBody extends StatelessWidget {
                             ),
                           ],
                         ),
-                        VGap(height: window.physicalSize.height * 0.05),
+                        // VGap(height: window.physicalSize.height * 0.03),
                         GradientButton(),
-                        VGap(height: window.physicalSize.height * 0.08),
+                        VGap(height: window.physicalSize.height * 0.03),
                       ],
                     ),
                   ),
@@ -120,12 +120,12 @@ class DesktopBody extends StatelessWidget {
                 ],
               ),
             ),
-            VGap(height: window.physicalSize.height * 0.1),
+            VGap(height: window.physicalSize.height * 0.03),
             CardSlides(scrollController: scrollController),
             Container(
               margin: EdgeInsets.symmetric(
                   vertical: 100.0,
-                  horizontal: window.physicalSize.width * 0.05),
+                  horizontal: window.physicalSize.width * 0.03),
               padding: EdgeInsets.symmetric(vertical: 60.0, horizontal: 50.0),
               decoration: BoxDecoration(
                 color: Colors.red,
@@ -160,12 +160,14 @@ class DesktopBody extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  VGap(height: window.physicalSize.height * 0.05),
+                  VGap(height: window.physicalSize.height * 0.03),
                   GradientButton(),
                 ],
               ),
             ),
-            VGap(height: window.physicalSize.height * 0.1),
+            VGap(height: window.physicalSize.height * 0.03),
+            Text('daviesmanueltamunotonye@gmial.com'),
+            VGap(height: window.physicalSize.height * 0.03),
             const GradientText(
               AppStrings.lookingForward,
               gradient: Pallets.appGradient,
@@ -176,7 +178,7 @@ class DesktopBody extends StatelessWidget {
                 fontFamily: AppStrings.conthraxFont,
               ),
             ),
-            VGap(height: window.physicalSize.height * 0.1),
+            VGap(height: window.physicalSize.height * 0.03),
             GradientButton(),
             VGap(height: window.physicalSize.height * 0.3),
           ],
