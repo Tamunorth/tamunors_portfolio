@@ -11,7 +11,7 @@ class ResponsiveWidget extends StatelessWidget {
     required this.desktop,
   }) : super(key: key);
 
-  static double mobileMaxWidth = 600;
+  static double mobileMaxWidth = 700;
 
   @override
   Widget build(BuildContext context) {

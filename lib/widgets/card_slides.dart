@@ -19,13 +19,13 @@ class CardSlides extends StatefulWidget {
 class _CardSlidesState extends State<CardSlides> {
   Timer? _timer;
 
-  final Duration _scrollDuration = const Duration(seconds: 5);
+  final Duration _scrollDuration = const Duration(seconds: 3);
 
   final Curve _scrollCurve = Curves.linear;
 
   final int _scrollIncrementer = 1;
 
-  int _currentScrollIndex = 0;
+  late final ValueNotifier<int> _currentScrollIndex;
 
   /// This functions triggers the [animateTo] function in the [scrollController]
   /// to animate the list towards a given index
@@ -40,10 +40,11 @@ class _CardSlidesState extends State<CardSlides> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(const Duration(seconds: 5), (_) async {
-      _currentScrollIndex += _scrollIncrementer;
-      scrollToInfinityIndex(_currentScrollIndex);
-      setState(() {});
+    _currentScrollIndex = ValueNotifier(0);
+
+    _timer = Timer.periodic(const Duration(seconds: 3), (_) async {
+      _currentScrollIndex.value += _scrollIncrementer;
+      scrollToInfinityIndex(_currentScrollIndex.value);
     });
   }
 
@@ -52,6 +53,7 @@ class _CardSlidesState extends State<CardSlides> {
     super.dispose();
     _timer?.cancel();
     widget.scrollController.dispose();
+    _currentScrollIndex.dispose();
   }
 
   final widgetsList = [
@@ -108,6 +110,7 @@ class _CardSlidesState extends State<CardSlides> {
       // width: 1000,
       color: Colors.black,
       child: ListView.builder(
+        physics: NeverScrollableScrollPhysics(),
         controller: widget.scrollController,
         scrollDirection: Axis.horizontal,
         // itemCount: cardList.length,
