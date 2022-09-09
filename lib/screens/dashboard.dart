@@ -27,7 +27,7 @@ class AppBarText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isMobile = window.physicalSize.width < 600;
+    bool isMobile = window.physicalSize.width < 700;
 
     return GestureDetector(
       onTap: () {

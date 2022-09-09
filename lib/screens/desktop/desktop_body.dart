@@ -54,7 +54,7 @@ class DesktopBody extends StatelessWidget {
                                   ),
                           ],
                         ),
-                        const GradientText(
+                        GradientText(
                           'Developer ',
                           gradient: Pallets.appGradient,
                           style: TextStyle(
@@ -121,7 +121,8 @@ class DesktopBody extends StatelessWidget {
               ),
             ),
             VGap(height: window.physicalSize.height * 0.03),
-            CardSlides(scrollController: scrollController),
+            RepaintBoundary(
+                child: CardSlides(scrollController: scrollController)),
             Container(
               margin: EdgeInsets.symmetric(
                   vertical: 100.0,
@@ -168,7 +169,7 @@ class DesktopBody extends StatelessWidget {
             VGap(height: window.physicalSize.height * 0.03),
             Text('daviesmanueltamunotonye@gmial.com'),
             VGap(height: window.physicalSize.height * 0.03),
-            const GradientText(
+            GradientText(
               AppStrings.lookingForward,
               gradient: Pallets.appGradient,
               textAlign: TextAlign.center,

@@ -90,7 +90,7 @@ class _MobileBodyState extends State<MobileBody> {
           children: [
             Container(
               width: double.infinity,
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
               margin: EdgeInsets.symmetric(vertical: 20.0),
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
@@ -109,7 +109,6 @@ class _MobileBodyState extends State<MobileBody> {
             ),
             Container(
               width: double.infinity,
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               margin: EdgeInsets.symmetric(vertical: 10.0),
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
@@ -150,9 +149,9 @@ class _MobileBodyState extends State<MobileBody> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            VGap(height: window.physicalSize.height * 0.05),
+            VGap(height: window.physicalSize.height * 0.002),
             Container(
-              padding: EdgeInsets.all(window.physicalSize.width * 0.05),
+              padding: EdgeInsets.all(window.physicalSize.width * 0.02),
               margin: EdgeInsets.symmetric(
                   horizontal: window.physicalSize.width * 0.02),
               child: Column(
@@ -182,7 +181,7 @@ class _MobileBodyState extends State<MobileBody> {
                             ),
                           ],
                         ),
-                        const GradientText(
+                        GradientText(
                           'Developer ',
                           gradient: Pallets.appGradient,
                           style: TextStyle(
@@ -238,7 +237,8 @@ class _MobileBodyState extends State<MobileBody> {
               ),
             ),
             VGap(height: window.physicalSize.height * 0.1),
-            CardSlides(scrollController: scrollController),
+            RepaintBoundary(
+                child: CardSlides(scrollController: scrollController)),
             Container(
               margin: EdgeInsets.symmetric(
                   vertical: 100.0,
@@ -283,7 +283,7 @@ class _MobileBodyState extends State<MobileBody> {
               ),
             ),
             VGap(height: window.physicalSize.height * 0.1),
-            const GradientText(
+            GradientText(
               AppStrings.lookingForward,
               gradient: Pallets.appGradient,
               textAlign: TextAlign.center,
