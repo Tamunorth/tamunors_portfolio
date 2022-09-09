@@ -23,7 +23,7 @@ class _CardSlidesState extends State<CardSlides> {
 
   final Curve _scrollCurve = Curves.linear;
 
-  final int _scrollIncrementer = 1;
+  final int incrementer = 1;
 
   late final ValueNotifier<int> _currentScrollIndex;
 
@@ -43,7 +43,7 @@ class _CardSlidesState extends State<CardSlides> {
     _currentScrollIndex = ValueNotifier(0);
 
     _timer = Timer.periodic(const Duration(seconds: 3), (_) async {
-      _currentScrollIndex.value += _scrollIncrementer;
+      _currentScrollIndex.value += incrementer;
       scrollToInfinityIndex(_currentScrollIndex.value);
     });
   }
